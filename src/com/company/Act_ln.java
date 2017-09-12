@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Act_ln {
     public void act_ln()throws Exception{
         NumberFormat formatter = NumberFormat.getNumberInstance();
-        long startTime = System.currentTimeMillis();
         Scanner input = new Scanner (System.in);
         System.out.println("Введите значение x от (-1;1]");
         double x = input.nextDouble();
@@ -29,9 +28,7 @@ public class Act_ln {
             sum +=temp;
             index++;
         }
-        long timeSpent = System.currentTimeMillis() - startTime;
         System.out.println("sum(my function)="+formatter.format(sum));
         System.out.println("sum_standart(standart function)="+formatter.format(sum_standart));
-        System.out.println("программа выполнялась " + timeSpent + " миллисекунд");
     }
 }
